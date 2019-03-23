@@ -1,0 +1,12 @@
+!--- URXVT ---!
+
+URxvt.scrollBar:				False
+URxvt.font:						xft:Source Code Pro for Powerline:size=10:antialias=true \
+								xft:siji:size=10:antialias=false
+URxvt.letterSpace:				0
+URxvt.lineSpace:				-1
+URxvt.antialias:				True
+!URxvt.transparent:				True
+!URxvt.shading:					25
+URxvt.depth:					32
+URxvt.skipBuiltinGlyphs:		True

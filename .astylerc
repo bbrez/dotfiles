@@ -1,0 +1,17 @@
+style=attach
+
+indent=force-tab=4
+indent-namespaces
+indent-labels
+indent-preproc-block
+
+break-blocks
+
+pad-oper
+pad-comma
+pad-header
+unpad-paren
+
+align-pointer=name
+
+close-templates
