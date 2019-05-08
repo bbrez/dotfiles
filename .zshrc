@@ -24,8 +24,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PROMPT='%B%F{blue}[%f%n%F{blue}@%f%m%F{blue}]%f%b: %F{yellow}%2~%f %F{blue}%#>%f '
-RPROMPT='[%F{yellow}%?%f]'
+PROMPT='%B%F{blue}[%f%n%F{blue}@%f%m%F{blue}]%f%b: %B%F{yellow}%2~%f%b %F{blue}%#>%f '
+RPROMPT='[%B%F{yellow}%?%f%b]'
 
 alias ls='ls -F --color=always'
 alias diff='diff --color=auto'
@@ -40,6 +40,9 @@ alias vi='vim'
 export RANGER_LOAD_DEFAULT_RC=false
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/go/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/libnvvp
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/libnsight
 
 #zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

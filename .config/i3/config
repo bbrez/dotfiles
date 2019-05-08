@@ -166,12 +166,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id wal -i /home/minorro/Images --backend schemer2
-exec_always --no-startup-id wpg -m
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id setxkbmap -layout "br,us" -option "grp:alt_shift_toggle"
-exec_always --no-startup-id $HOME/.config/compton/launch.sh
 
 exec --no-startup-id xset +fp $HOME/.local/share/fonts
 exec --no-startup-id xset fp rehash
@@ -182,18 +178,25 @@ gaps inner 12
 gaps outer 3
 focus_follows_mouse no
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 5 
+bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 5
 
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+exec_always --no-startup-id xset r 300 25
+exec_always --no-startup-id xinput -disable	"pointer:ELAN Touchscreen"
+exec_always --no-startup-id xinput -disable	"keyboard:ELAN Touchscreen"
+exec_always --no-startup-id /home/minorro/.local/bin/wpg -m
+exec_always --no-startup-id /home/minorro/.config/polybar/launch.sh
+exec_always --no-startup-id /home/minorro/.config/compton/launch.sh
+exec_always --no-startup-id /home/minorro/.config/conky/launch.sh
 
 #Colors
 #Import from .Xresources
