@@ -1,0 +1,9 @@
+setxkbmap -layout "br,us" -option "grp:alt_shift_toggle"
+xset +fp $HOME/.local/share/fonts
+xset fp rehash
+xset r 300 25
+
+wpg -m
+/home/minorro/.config/polybar/launch_ob.sh
+/home/minorro/.config/picom/launch.sh
+/home/minorro/.config/conky/launch.sh

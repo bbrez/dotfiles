@@ -14,7 +14,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Source\ Code\ Pro\ for\ Powerline 8
+font pango:Source\ Code\ Pro 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -182,8 +182,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 5 
-bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec sudo xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec sudo xbacklight -dec 10
 
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioStop exec playerctl stop
@@ -191,11 +191,9 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 exec_always --no-startup-id xset r 300 25
-exec_always --no-startup-id xinput -disable	"pointer:ELAN Touchscreen"
-exec_always --no-startup-id xinput -disable	"keyboard:ELAN Touchscreen"
-exec_always --no-startup-id /home/minorro/.local/bin/wpg -m
+exec_always --no-startup-id wpg -m
 exec_always --no-startup-id /home/minorro/.config/polybar/launch.sh
-exec_always --no-startup-id /home/minorro/.config/compton/launch.sh
+exec_always --no-startup-id /home/minorro/.config/picom/launch.sh
 exec_always --no-startup-id /home/minorro/.config/conky/launch.sh
 
 #Colors
